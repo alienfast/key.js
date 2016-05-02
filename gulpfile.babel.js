@@ -33,7 +33,7 @@ const js = new Aggregate(gulp, 'js',
     new RollupUmd(gulp, preset, rollupConfig, {
       options: {
         dest: 'key.umd.js',
-        moduleName: 'key'
+        moduleName: 'key.js'
       }
     })
   )
