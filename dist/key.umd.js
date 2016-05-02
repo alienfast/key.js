@@ -1,5 +1,5 @@
 /*!
-  * key.js v1.0.0 (https://github.com/alienfast/key.js#readme)
+  * key.js v1.0.1 (https://github.com/alienfast/key.js#readme)
   * Copyright 2016 Kevin Ross <kevin.ross@alienfast.com> (https://github.com/rosskevin)
   * Licensed under MIT
   */
