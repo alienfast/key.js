@@ -44,24 +44,11 @@ const js = new Aggregate(gulp, 'js',
 
 const defaultRecipes = new Aggregate(gulp, 'default', js)
 
-const all = new Aggregate(gulp, 'all',
-  series(gulp,
-    defaultRecipes,
-    new Uglify(gulp, preset, {
-      debug: true,
-      task: {name: 'iife:uglify'},
-      source: {
-        glob: 'key.iife.js'
-      }
-    })
-  )
-)
-
 // publish
 new Aggregate(gulp, 'publish',
   series(gulp,
     new Prepublish(gulp, preset),   // asserts committed
-    all,
+    defaultRecipes,
     new PublishBuild(gulp, preset)
   )
 )
