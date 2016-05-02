@@ -33,22 +33,12 @@ const js = new Aggregate(gulp, 'js',
     new CleanJavascripts(gulp, preset),
     new EsLint(gulp, preset),
     new Mocha(gulp, preset),
-    parallel(gulp,
-      // umd (non-bundled)
-      new RollupUmd(gulp, preset, rollupConfig, {
-        options: {
-          dest: 'key.umd.js',
-          moduleName: 'key'
-        }
-      }),
-      // self executing (fully bundled)
-      new RollupIife(gulp, preset, rollupConfig, {
-        options: {
-          dest: 'key.iife.js',
-          moduleName: 'key'
-        }
-      })
-    )
+    new RollupUmd(gulp, preset, rollupConfig, {
+      options: {
+        dest: 'key.umd.js',
+        moduleName: 'key'
+      }
+    })
   )
 )
 
