@@ -1,12 +1,12 @@
 /*!
-  * key.js v1.0.2 (https://github.com/alienfast/key.js#readme)
+  * key.js v1.0.3 (https://github.com/alienfast/key.js#readme)
   * Copyright 2016 Kevin Ross <kevin.ross@alienfast.com> (https://github.com/rosskevin)
   * Licensed under MIT
   */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
   typeof define === 'function' && define.amd ? define(['exports'], factory) :
-  (factory((global.key = global.key || {}, global.key.js = global.key.js || {})));
+  (factory((global.key = global.key || {})));
 }(this, function (exports) { 'use strict';
 
   var babelHelpers = {};
