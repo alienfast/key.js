@@ -5,7 +5,6 @@ import {
   Prepublish,
   PublishBuild,
   RollupUmd,
-  RollupCjs,
   EsLint,
   Aggregate,
   series
@@ -18,6 +17,7 @@ const preset = Preset.baseline()
 
 const rollupConfig = {
   options: {
+    moduleName: 'keyJs',
     banner: `/*!
   * ${pkg.name} v${pkg.version} (${pkg.homepage})
   * Copyright ${moment().format("YYYY")} ${pkg.author}
@@ -31,16 +31,9 @@ const js = new Aggregate(gulp, 'js',
     new CleanJavascripts(gulp, preset),
     new EsLint(gulp, preset),
     new Mocha(gulp, preset),
-    // new RollupUmd(gulp, preset, rollupConfig, {
-    //   options: {
-    //     dest: 'key.umd.js',
-    //     moduleName: 'keyJs'
-    //   }
-    // })
-    new RollupCjs(gulp, preset, rollupConfig, {
+    new RollupUmd(gulp, preset, rollupConfig, {
       options: {
-        dest: 'key.cjs.js',
-        moduleName: 'keyJs'
+        dest: 'key.umd.js',
       }
     })
   )
