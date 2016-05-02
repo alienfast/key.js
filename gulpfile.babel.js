@@ -5,6 +5,7 @@ import {
   Prepublish,
   PublishBuild,
   RollupUmd,
+  RollupCjs,
   EsLint,
   Aggregate,
   series
@@ -30,10 +31,16 @@ const js = new Aggregate(gulp, 'js',
     new CleanJavascripts(gulp, preset),
     new EsLint(gulp, preset),
     new Mocha(gulp, preset),
-    new RollupUmd(gulp, preset, rollupConfig, {
+    // new RollupUmd(gulp, preset, rollupConfig, {
+    //   options: {
+    //     dest: 'key.umd.js',
+    //     moduleName: 'keyJs'
+    //   }
+    // })
+    new RollupCjs(gulp, preset, rollupConfig, {
       options: {
-        dest: 'key.umd.js',
-        moduleName: 'key'
+        dest: 'key.cjs.js',
+        moduleName: 'keyJs'
       }
     })
   )

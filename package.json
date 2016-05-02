@@ -2,7 +2,7 @@
   "name": "key.js",
   "version": "1.0.4",
   "description": "ES2015 library with constants to check if Key.is(...keys) or Key.isNot(...keys) - nothing more",
-  "main": "dist/key.umd.js",
+  "main": "dist/key.cjs.js",
   "jsnext:main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

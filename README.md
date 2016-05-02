@@ -10,7 +10,7 @@ ES2015 library with constants to check if Key.is(...keys) or Key.isNot(...keys) 
 ## Usage
 
 ```javascript
-import {Key, Keycodes} from 'key'
+import {Key, Keycodes} from 'key.js'
 ```
 
 ### Key
