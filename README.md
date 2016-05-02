@@ -3,7 +3,15 @@
 # key.js
 ES2015 library with constants to check if Key.is(...keys) or Key.isNot(...keys) - nothing more.
 
+## Installation
+
+`npm install --save key.js`
+
 ## Usage
+
+```javascript
+import {Key, Keycodes} from 'key'
+```
 
 ### Key
 The primary class for keycode checking
