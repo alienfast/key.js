@@ -1,6 +1,6 @@
 {
   "name": "key.js",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "ES2015 library with constants to check if Key.is(...keys) or Key.isNot(...keys) - nothing more",
   "main": "dist/key.cjs.js",
   "jsnext:main": "src/index.js",
