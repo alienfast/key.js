@@ -5,12 +5,9 @@ import {
   Prepublish,
   PublishBuild,
   RollupUmd,
-  RollupIife,
   EsLint,
   Aggregate,
-  Uglify,
-  series,
-  parallel
+  series
 } from 'gulp-pipeline'
 import gulp from 'gulp'
 import pkg from './package.json'
