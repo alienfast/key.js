@@ -23,4 +23,4 @@ before_install:
 before_script:
   - npm install -g gulpjs/gulp-cli#4.0
 
-script: gulp all
+script: gulp
